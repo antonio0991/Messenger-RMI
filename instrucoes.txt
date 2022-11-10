@@ -1,0 +1,14 @@
+Abrir uma tela de linha de comando (Command prompt) para cada processo.
+
+Rodar o rmiregistry (binder):
+> rmiregistry
+
+Rodar o servidor (a partir do diretório raiz do projeto "Messenger-RMI"):
+> java -classpath bin/ -Djava.rmi.server.codebase=file:bin/ messenger.rmi.MessengerServerImpl
+
+Rodar o primeiro cliente (a partir do diretório raiz do projeto "Messenger-RMI"):
+> java -classpath bin/ -Djava.rmi.server.codebase=file:bin/ messenger.rmi.MessengerClientImpl usuario1
+
+Rodar o segundo cliente (a partir do diretório raiz do projeto "Messenger-RMI"):
+> java -classpath bin/ -Djava.rmi.server.codebase=file:bin/ messenger.rmi.MessengerClientImpl usuario2
+
